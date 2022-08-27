@@ -14,15 +14,13 @@ class App extends React.Component {
     return (
       <div className="app-container">
         <nav>
-          <Link to="/home">Home</Link>
+          <Link to="/">Home</Link>
           <Link to="/contact">Contact</Link>
         </nav>
         <Routes>
-          <Route path="/" element={<App />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-        <h1>Hiii</h1>
       </div>
     );
   }
