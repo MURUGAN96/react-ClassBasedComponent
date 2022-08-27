@@ -1,4 +1,6 @@
 import React from 'react';
+import ButtonElement from './utils/button.component';
+import InputElement from './utils/inputForm.component';
 
 //Use state
 //this.state{},this.setState{}
@@ -23,7 +25,12 @@ class App extends React.Component {
 
   componentWillUnmount() {}
   render() {
-    return <h1>Hii</h1>;
+    return (
+      <div>
+        <ButtonElement type="contained" text="Simple"></ButtonElement>
+        <InputElement></InputElement>
+      </div>
+    );
   }
 }
 
