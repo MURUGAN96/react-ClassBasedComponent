@@ -9,7 +9,7 @@ class InputElement extends React.Component {
   render() {
     return (
       <>
-        <TextField id="outlined-required" label="Name" />
+        <TextField id="outlined-required" label={this.props.text} />
       </>
     );
   }
