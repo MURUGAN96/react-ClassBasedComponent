@@ -1,9 +1,6 @@
 import React from 'react';
 
-import Home from './home.component';
-import Contact from './contact.component';
-
-import { Routes, Route, Link, Navigate } from 'react-router-dom';
+import { Outlet, Link, Navigate } from 'react-router-dom';
 
 class App extends React.Component {
   constructor(props) {
@@ -14,13 +11,11 @@ class App extends React.Component {
     return (
       <div className="app-container">
         <nav>
-          <Link to="/">Home</Link>
+          <Link to="/">App</Link>
+          <Link to="/home">Home</Link>
           <Link to="/contact">Contact</Link>
         </nav>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+        <Outlet />
       </div>
     );
   }
